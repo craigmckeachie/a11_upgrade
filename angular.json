@@ -21,11 +21,10 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/angular/assets"
+              "src/angular/assets",
+              "src/angularjs"
             ],
-            "styles": [
-              "src/angular/styles.css"
-            ],
+            "styles": ["src/angular/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -82,13 +81,8 @@
             "polyfills": "src/angular/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/angular/favicon.ico",
-              "src/angular/assets"
-            ],
-            "styles": [
-              "src/angular/styles.css"
-            ],
+            "assets": ["src/angular/favicon.ico", "src/angular/assets"],
+            "styles": ["src/angular/styles.css"],
             "scripts": []
           }
         },
@@ -100,9 +94,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
