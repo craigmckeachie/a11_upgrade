@@ -3,10 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { UpgradeModule } from '@angular/upgrade/static';
+import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
+import { WidgetComponent } from './widget/widget.component';
+
+declare var angular: any;
+angular
+  .module('phonecatApp')
+  .directive('appWidget', downgradeComponent({ component: WidgetComponent }));
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, WidgetComponent],
   imports: [BrowserModule, UpgradeModule],
+  entryComponents: [WidgetComponent],
   providers: [],
   // bootstrap: [AppComponent]
 })
